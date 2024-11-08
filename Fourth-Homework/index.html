@@ -18,14 +18,14 @@
       <fieldset>
         <legend>Order Information</legend>
         <br />
-        <label for="text"><b>Next</b></label> <br />
+        <label for="text"><b>Name</b></label> <br />
         <input type="text" name="text" id="text" />
         <br />
         <br />
         <input type="radio" name="Here" id="Here" />
         <label for="radio">Here</label>
         <br />
-        <input type="radio" name="To Go" id="To Go" />
+        <input type="radio" name="Here" id="To Go" />
         <label for="radio">To Go</label>
       </fieldset>
       <fieldset>
@@ -33,47 +33,47 @@
         <br />
         <label><b>Monday</b></label>
         <br />
-        <input type="radio" name="Tomato Mozzarella" id="Tomato Mozzarella" />
+        <input type="radio" name="Monday Options" id="Tomato Mozzarella" />
         <label for="radio">Tomato Mozzarella</label>
         <br />
-        <input type="radio" name="Chicken Salad" id="Chicken Salad" />
+        <input type="radio" name="Monday Options" id="Chicken Salad" />
         <label for="radio">Chicken Salad</label>
         <br />
         <br />
         <label><b>Tuesday</b></label>
         <br />
-        <input type="radio" name="Greek Salad Wrap" id="Greek Salad Wrap" />
+        <input type="radio" name="Tuesday Options" id="Greek Salad Wrap" />
         <label for="radio">Greek Salad Wrap</label>
         <br />
-        <input type="radio" name="Toto Wrap" id="Toto Wrap" />
+        <input type="radio" name="Tuesday Options" id="Toto Wrap" />
         <label for="radio">Toto Wrap</label>
         <br />
         <br />
         <p><b>Wednesday</b></p>
-        <input type="radio" name="Red Pepper Hummus" id="Red Pepper Hummus" />
+        <input type="radio" name="Wednesday Options" id="Red Pepper Hummus" />
         <label for="radio">Red Pepper Hummus</label>
         <br />
-        <input type="radio" name="Roasted Turkey" id="Roasted Turkey" />
+        <input type="radio" name="Wednesday Options" id="Roasted Turkey" />
         <label for="radio">Roasted Turkey</label>
         <br />
         <br />
         <p><b>Thursday</b></p>
         <input
           type="radio"
-          name="Carrot-Ginger Hummus Wrap"
+          name="Thursday Options"
           id="Carrot-Ginger Hummus Wrap"
         />
         <label for="radio">Carrot-Ginger Hummus Wrap</label>
         <br />
-        <input type="radio" name="Egg Salad" id="Egg Salad" />
+        <input type="radio" name="Thursday Options" id="Egg Salad" />
         <label for="radio">Egg Salad</label>
         <br />
         <br />
         <p><b>Friday</b></p>
-        <input type="radio" name="Dado Wrap" id="Dado Wrap" />
+        <input type="radio" name="Friday Options" id="Dado Wrap" />
         <label for="radio">Dado Wrap</label>
         <br />
-        <input type="radio" name="Tuna Salad" id="Tuna Salad" />
+        <input type="radio" name="Friday Options" id="Tuna Salad" />
         <label for="radio">Tuna Salad</label>
         <hr />
         <input
@@ -88,13 +88,13 @@
         <legend>Snack</legend>
         <br />
         <p><b>Snacks</b></p>
-        <input type="radio" name="Apple" id="Apple" />
+        <input type="radio" name="Snacks" id="Apple" />
         <label for="radio">Apple</label>
         <br />
-        <input type="radio" name="Banana" id="Banana" />
+        <input type="radio" name="Snacks" id="Banana" />
         <label for="radio">Banana</label>
         <br />
-        <input type="radio" name="Potato Chips" id="Potato Chips" />
+        <input type="radio" name="Snacks" id="Potato Chips" />
         <label for="radio">Potato Chips</label>
       </fieldset>
       <fieldset>
@@ -102,6 +102,9 @@
         <br />
         <label for="text"><b>Drinks</b></label>
         <select name="Tea" id="Tea">
+          <option value="" selected disabled>
+            Please select one of the options...
+          </option>
           <option value="Hot Black Tea - Keemun">Hot Black Tea - Keemun</option>
           <option value="Iced Black Tea -keemun">
             Iced Black Tea - keemun
@@ -109,9 +112,7 @@
           <option value="Coffee">Coffee</option>
           <option value="Iced Coffee">Iced Coffee</option>
           <option value="Organic Peppermint">Organic Peppermint</option>
-          <option value="Hot Green Tea - sencha" selected>
-            Hot Green Tea - Sencha
-          </option>
+          <option value="Hot Green Tea - sencha">Hot Green Tea - Sencha</option>
           <option value="Iced Green Tea - sencha">
             Iced Green Tea - Sencha
           </option>
