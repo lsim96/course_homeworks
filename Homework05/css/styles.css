@@ -10,6 +10,7 @@ html {
 header {
   background-color: #000;
 }
+
 main {
   background-image: url(../Images/hero-background.jpg);
   background-size: cover;
@@ -303,8 +304,9 @@ table {
   border: 2px solid rgb(200, 200, 200);
   letter-spacing: 1px;
   font-size: 2rem;
-  margin: 10px;
   background-color: #ff6c00;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td,
