@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./about.html">About</a>
+
+        <a href="./contact.html"> Contact</a>
+
+        <a href="./gallery.html"> Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="h1-index">Welcome to our webpage</h1>
+      <section>
+        <article class="box-article">
+          <p class="article-p">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam,
+            nemo earum? At consectetur est tenetur, perferendis provident
+            placeat rerum repudiandae laboriosam doloremque obcaecati animi
+            deleniti autem saepe porro itaque atque vitae omnis dicta unde
+            numquam nostrum doloribus exercitationem nulla. Voluptate aliquam
+            enim perferendis illo porro impedit a quod consectetur vel.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <form>
+          <fieldset class="top-label">
+            <legend class="legend-wrap">Select the further options</legend>
+            <label for="text">Name</label>
+            <input class="search-bar" type="text" name="text" id="text" />
+            <input type="radio" name="Here" id="New" />
+            <label for="radio">New</label>
+            <input type="radio" name="Here" id="Men" />
+            <label for="radio">Men</label>
+            <input type="radio" name="Here" id="Women" />
+            <label for="radio">Women</label>
+            <input type="radio" name="Here" id="Kids" />
+            <label for="radio">Kids</label>
+            <input type="radio" name="Here" id="Sale" />
+            <label for="radio">Sale</label>
+            <div>
+              <label for="text">Enter your request here</label>
+              <textarea
+                class="block-text"
+                name="text"
+                id="text"
+                cols="90    "
+                rows="11"
+              ></textarea>
+            </div>
+          </fieldset>
+          <input class="button" type="submit" value="Submit" />
+        </form>
+      </aside>
+    </main>
+    <footer>
+      <h2 id="h2-index">Latest Drops</h2>
+      <p class="footer-p">Featuring the winter season newcomers</p>
+
+      <img
+        class="footer-img"
+        src="./Images/footer-bikes.jpg"
+        alt="Mountain bikes propped on a fence, overlooking a hill"
+        title="Mountain bikes"
+      />
+      <span>
+        <a href="https://www.canyon.com/en-mk/mountain-bikes/">
+          <img
+            class="footer-img"
+            src="./Images/footer-bikes02.jpg"
+            alt="Mountain bikes propped on a tree in the woods"
+            title="Newcomers"
+          />
+        </a>
+      </span>
+      <h3>Subscribe to receive emails</h3>
+      <form class="footer-form">
+        <p>
+          Date Picker
+          <input type="date" name="date" id="date" />
+        </p>
+        <p>
+          Email
+          <input type="email" name="email" id="email" />
+        </p>
+        <input class="form-button" type="submit" value="Submit" />
+      </form>
+    </footer>
+  </body>
+</html>

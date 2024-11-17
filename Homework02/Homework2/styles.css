@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%;
+}
+
+.inline {
+  float: left;
+}
+
+p,
+.size {
+  font-size: 1.5rem;
+}
+
+.content {
+  background-image: url(./Images/background.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+}
+
+.table-content > tbody > tr > td,
+.table-content,
+.table-content > thead > tr > th {
+  border: 3px solid #000;
+  margin: 0;
+}
