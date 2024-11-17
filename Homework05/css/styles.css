@@ -7,7 +7,9 @@ html {
   font-family: "Lato", sans-serif;
 }
 
-header,
+header {
+  background-color: #000;
+}
 main {
   background-image: url(../Images/hero-background.jpg);
   background-size: cover;
@@ -36,8 +38,10 @@ aside {
   font-size: 20px;
 }
 
-fieldset {
+.top-label {
   height: 30vh;
+  color: #ff7700;
+  font-style: italic;
 }
 
 #h2-index {
@@ -48,14 +52,14 @@ fieldset {
 }
 
 .h1-index {
-  text-shadow: tomato 1px 0 10px;
+  text-shadow: rgb(53, 48, 47) 3px 0 10px;
   letter-spacing: 1px;
   text-align: center;
   font-size: 8rem;
 }
 
 .h1-gallery {
-  text-shadow: #231f1d 5px 0 10px;
+  text-shadow: #231f1d 3px 0 20px;
   letter-spacing: 1px;
   text-align: center;
   font-size: 8rem;
@@ -65,7 +69,7 @@ fieldset {
   padding: 5px;
   margin: 10px;
   letter-spacing: 1px;
-  color: #2f9ca8;
+  color: #fa6b05;
 }
 
 .button {
@@ -125,7 +129,7 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #86a7b0;
+  background-color: #f17005;
 }
 
 .footer-p {
@@ -231,7 +235,7 @@ a:hover {
 
   50% {
     transform: rotate(45deg);
-    background: url(../Images/stars.jpg);
+    background: url(../Images/pulp.webp);
     background-size: cover;
   }
 
@@ -246,7 +250,7 @@ a:hover {
   left: 38%;
   width: 350px;
   height: 330px;
-  background: url(../Images/sky.jpg);
+  background: url(../Images/kill-bill.jpg);
   background-size: cover;
   animation-name: pop;
   animation-delay: 1s;
@@ -256,7 +260,7 @@ a:hover {
 
 .box li {
   font-size: 2rem;
-  color: #b3acac;
+  color: #fdf6f6;
 }
 
 #box-p {
@@ -265,7 +269,7 @@ a:hover {
   line-height: 16px;
   letter-spacing: 1px;
   text-shadow: #312929 3px 0 10px;
-  color: #a3a2a2;
+  color: #f9f4f4;
 }
 
 #contact-form {
