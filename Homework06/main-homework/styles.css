@@ -1,0 +1,86 @@
+body {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.section-wrap {
+  width: 550px;
+  height: 560px;
+  margin-bottom: 40px;
+  padding: 5px 10px 10px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  top: 150px;
+  left: 450px;
+}
+
+.container {
+  position: relative;
+  height: 560px;
+  background-color: #433a36;
+}
+
+.box-one {
+  width: 120px;
+  height: 160px;
+  background-color: #fdf9e6;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.box-two {
+  width: 410px;
+  height: 410px;
+  background-color: #dd4d3aed;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.box-three {
+  width: 120px;
+  height: 225px;
+  background-color: #fdf9e6;
+  position: absolute;
+  top: 190px;
+  left: 5px;
+}
+
+.box-four {
+  width: 120px;
+  height: 130px;
+  background-color: #589cc5;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.box-five {
+  width: 380px;
+  height: 130px;
+  background-color: #fdf9e6;
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
+}
+
+.box-six {
+  width: 18px;
+  height: 55px;
+  background-color: #fdf9e6;
+  position: absolute;
+  bottom: 80px;
+  right: 5px;
+}
+
+.box-seven {
+  width: 18px;
+  height: 55px;
+  background-color: #fcff00;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
