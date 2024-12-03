@@ -8,6 +8,7 @@ if (input === null) {
   if (Number.isNaN(number)) {
     alert("Please enter a valid number");
   }
+
   if (number >= 100) {
     alert("You should consider investing in Nvidia.");
   } else if (number >= 75) {
