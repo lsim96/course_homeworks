@@ -1,17 +1,17 @@
 function calculateDogYears(years, conversionType) {
   switch (conversionType) {
-    case "dog_to_human":
+    case "dogToHuman":
       return years / 7;
-    case "human_to_dog":
+    case "humanToDog":
       return years * 7;
     default:
       alert(
-        "ERROR! Wrong conversion type, use one of the following types: dog_to_human or human_to_dog years"
+        "ERROR! Wrong conversion type, use one of the following types: dogToHuman or HumanToDog years"
       );
       return null;
   }
 }
 
-console.log(calculateDogYears(60, "dog_to_human"));
+console.log(calculateDogYears(60, "dogToHuman"));
 
-console.log(calculateDogYears(2, "human_to_dog"));
+console.log(calculateDogYears(2, "humanToDog"));
