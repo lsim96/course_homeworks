@@ -1,0 +1,10 @@
+let firstHead = document.getElementById("myTitle");
+firstHead.innerHTML = "YEAAAH BUDDY!";
+let firstPara = document.getElementsByClassName("paragraph")[0];
+firstPara.innerHTML = "I'm just trying stuff";
+let secondPara = document.getElementsByClassName("second")[0];
+secondPara.innerHTML = "It is pretty easy!";
+lastHead = document.getElementsByTagName("div")[2].firstElementChild;
+lastHead.innerHTML = "Changing the last Head";
+lastH3 = document.getElementsByTagName("div")[2].lastElementChild;
+lastH3.innerHTML = "Last element changout";

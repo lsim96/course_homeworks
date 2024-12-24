@@ -6,12 +6,13 @@ let book = {
 
   status: function () {
     if (this.readingStatus) {
-      console.log("Already read 'The Robots of dawn' by Isaac Asimov");
+      console.log(`${this.title}-${this.author}`);
     } else {
       console.log(
         "You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins"
       );
     }
+    return;
   },
 };
 

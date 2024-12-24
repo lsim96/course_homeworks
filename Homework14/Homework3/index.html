@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework3</title>
+  </head>
+  <body>
+    <h1>Recipe Page Generator</h1>
+    <label for="nameOfRecipe">Enter the name of the recipe:</label>
+    <input type="text" id="nameOfRecipe" /> <br /><br />
+    <label for="numOfIngredients"
+      >How many ingredients does the recipe need?</label
+    >
+    <input type="number" id="numOfIngredients" min="1" required />
+    <div id="ingredientsInput"></div>
+    <button onclick="constructTheRecipe()">Build your recipe</button>
+    <div id="recipePage"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
