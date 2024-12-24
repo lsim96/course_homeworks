@@ -1,0 +1,10 @@
+#table1 {
+  border: 3px solid #d14343;
+  margin: 10px 0;
+}
+
+#td1 {
+  border: 3px solid #c9ca98;
+  padding: 5px;
+  font-style: italic;
+}
