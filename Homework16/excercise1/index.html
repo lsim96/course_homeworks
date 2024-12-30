@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise1</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="formContainer('login')">Log In</button>
+      <button onclick="formContainer('register')">Register</button>
+    </div>
+    <div id="registerForm" style="display: none">
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <span id="usernameMessage" hidden style="color: red"></span>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <span id="emailMessage" hidden style="color: red"></span>
+      </div>
+      <div>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" />
+        <span id="passwordMessage" hidden style="color: red"></span>
+      </div>
+      <div>
+        <label for="age1">Age</label>
+        <input type="text" id="age1" />
+        <span id="ageMessage" hidden style="color: red"></span>
+      </div>
+
+      <button id="addBtn">Submit</button>
+    </div>
+    <div id="logInForm" style="display: none">
+      <div>
+        <label for="username1">Username</label>
+        <input type="text" id="username1" />
+      </div>
+      <div>
+        <label for="pass1">Password</label>
+        <input type="password" id="pass1" />
+      </div>
+      <button id="logInBtn">Add</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
