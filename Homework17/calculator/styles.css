@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#btnCntr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+.clearDisplay {
+  width: 100%;
+  grid-column: 1 / span 4;
+}
+
+#container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#display {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  text-align: right;
+  border: none;
+  background-color: lightgray;
+  color: white;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: gray;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.btnOperator {
+  background-color: hsl(35, 100%, 55%);
+}
+
+.btnOperator:hover {
+  background-color: hsl(35, 100%, 65%);
+}
+.btnoperator:active {
+  background-color: hsl(35, 100%, 75%);
+}

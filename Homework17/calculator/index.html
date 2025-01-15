@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" id="display" disabled />
+      <div id="btnCntr">
+        <button onclick="getNumber(7)">7</button>
+        <button onclick="getNumber(8)">8</button>
+        <button onclick="getNumber(9)">9</button>
+        <button class="btnOperator" onclick="getOperator('/')">&#247;</button>
+
+        <button onclick="getNumber(4)">4</button>
+        <button onclick="getNumber(5)">5</button>
+        <button onclick="getNumber(6)">6</button>
+        <button class="btnOperator" onclick="getOperator('*')">&#215;</button>
+
+        <button onclick="getNumber(1)">1</button>
+        <button onclick="getNumber(2)">2</button>
+        <button onclick="getNumber(3)">3</button>
+        <button class="btnOperator" onclick="getOperator('-')">-</button>
+
+        <button onclick="getNumber(0)">0</button>
+        <button class="decimal" onclick="getNumber('.')">.</button>
+        <button class="btnOperator" onclick="getOperator('+')">+</button>
+        <button class="btnOperator" onclick="calculateInput()">=</button>
+        <button class="clearDisplay" onclick="clearDisplay()">C</button>
+      </div>
+    </div>
+    <span id="errorMessage" hidden style="color: red"></span>
+    <script src="./script.js"></script>
+  </body>
+</html>
