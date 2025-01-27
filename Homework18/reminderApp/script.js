@@ -10,6 +10,16 @@ let reminderTable = document.getElementById("reminder-table");
 let reminderTableBody = reminderTable.querySelector("tbody");
 
 addBtn.addEventListener("click", function () {
+  if (
+    titleInput.value === "" ||
+    priorityInput.value === "" ||
+    colorInput.value === "" ||
+    descriptionInput.value === ""
+  ) {
+    alert("Please fill in all fields before adding the reminder.");
+    return;
+  }
+
   let newReminder = {
     title: titleInput.value,
     priority: priorityInput.value,

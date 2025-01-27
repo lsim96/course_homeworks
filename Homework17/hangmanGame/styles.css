@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: lightgreen;
+  background: darkgreen;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
   width: 850px;
   gap: 70px;
   padding: 60px 40px;
-  background: #fff;
+  background: #d2c6c6;
   border-radius: 10px;
   align-items: flex-end;
   justify-content: space-between;
@@ -108,7 +108,7 @@ body {
 }
 
 :where(.game-modal, .keyboard) button:hover {
-  background: #8df3a3;
+  background: darkgreen;
 }
 
 .game-modal {
@@ -164,7 +164,7 @@ body {
 }
 
 .game-modal p b {
-  color: #5eba72;
+  color: darkgreen;
   font-weight: 600;
 }
 
