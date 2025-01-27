@@ -1,21 +1,21 @@
 let currentPage = 1;
 
-function getPlanetInfo(url) {
+let getPlanetInfo = (url) => {
   fetch(url)
-    .then(function (response) {
+    .then((response) => {
       return response.json();
     })
-    .then(function (data) {
+    .then((data) => {
       let planets = data.results.slice(0, 10);
       showPlanetDetails(planets);
       showPrevNextBtns(data.next, data.previous);
     })
-    .catch(function (response) {
+    .catch((response) => {
       console.log("Error fetching planets data:", response);
     });
-}
+};
 
-function showPlanetDetails(planets) {
+let showPlanetDetails = (planets) => {
   let tableBody = document.querySelector("#planets-table tbody");
   let mainTable = document.getElementById("planets-table");
   tableBody.innerHTML = "";
@@ -31,9 +31,9 @@ function showPlanetDetails(planets) {
     tableBody.appendChild(row);
   }
   mainTable.style.display = "table";
-}
+};
 
-function showPrevNextBtns(nextUrl, prevUrl) {
+let showPrevNextBtns = (nextUrl, prevUrl) => {
   let nextBtn = document.getElementById("nextBtn");
   let prevBtn = document.getElementById("prevBtn");
 
@@ -56,7 +56,7 @@ function showPrevNextBtns(nextUrl, prevUrl) {
   } else {
     prevBtn.style.display = "none";
   }
-}
+};
 
 document.getElementById("planetBtn").addEventListener("click", () => {
   let url = "https://swapi.py4e.com/api/planets/?page=1";
