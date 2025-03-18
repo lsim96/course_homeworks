@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
   }
 
   // I COMMENTED OUT THE FIRST PART, SO IT WONT GET CONFUSING!!
-  else if (req.url === "/add_student" && req.method === "GET") {
+else if (req.url === "/add_student" && req.method === "GET") {
     res.writeHead(200, { "content-type": "text/html" });
     res.end(`<form action="/all_students" method="POST">
             <label for="studentName">Enter student name:</label><br>
