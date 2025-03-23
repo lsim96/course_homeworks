@@ -49,7 +49,7 @@ export default class TrainerController {
   static async deleteTrainer(req, res) {
     try {
       await TrainerService.deleteSingleTrainer(req.params.id);
-      res.status(204).send({ message: "Trainer successfully deleted" });
+      res.status(200).send({ message: "Trainer successfully deleted" });
     } catch (error) {
       res.status(400).send({ message: error.message });
     }
@@ -59,7 +59,7 @@ export default class TrainerController {
     try {
       await TrainerService.deleteAllTrainers();
       res
-        .status(204)
+        .status(200)
         .send({ message: "All trainers have been successfully deleted" });
     } catch (error) {
       res.status(400).send({ message: error.message });

@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 
 export default class TrainerService {
   static async getTrainers(currentlyActive, sortBy) {
+
+    
     return await TrainerModel.getAll(currentlyActive, sortBy);
   }
 
