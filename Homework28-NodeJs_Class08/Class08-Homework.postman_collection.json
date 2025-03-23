@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "bfe4fb92-d803-4b21-9cf7-49c417817a57",
+		"name": "Class08-Homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059463"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recipes/67dc2221fdcf206e31a5d9de",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"67dc2221fdcf206e31a5d9de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNew",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Pizza\",\r\n    \"description\": \"Form the dough, add the cheese, pepperoni and tomato sauce. Bake it in the oven\",\r\n    \"ingredients\": [\r\n        \"tomatos\",\r\n        \"salt\",\r\n        \"pepperoni\",\r\n        \"cheese\",\r\n        \"parmesan\",\r\n        \"tomato sauce\",\r\n        \"dough\"\r\n    ],\r\n    \"instructions\": [\r\n        \"mixing\",\r\n        \"cutting\",\r\n        \"baking\"\r\n    ],\r\n    \"cookingTime\": 45,\r\n    \"difficulty\": \"medium\",\r\n    \"isVegetarian\": false,\r\n    \"category\": \"dinner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRecipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"_id\": \"67dc2221fdcf206e31a5d9de\",\r\n        \"title\": \"Chocolate Chip Cookies\",\r\n        \"description\": \"Classic homemade cookies\",\r\n        \"ingredients\": [\r\n            \"flour\",\r\n            \"butter\",\r\n            \"sugar\",\r\n            \"chocolate chips\"\r\n        ],\r\n        \"instructions\": [\r\n            \"mixing\",\r\n            \"constructing\",\r\n            \"baking\"\r\n        ],\r\n        \"cookingTime\": 30,\r\n        \"difficulty\": \"easy\",\r\n        \"category\": \"desert\",\r\n        \"isVegetarian\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes/67dc2221fdcf206e31a5d9de",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"67dc2221fdcf206e31a5d9de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRecipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"67dc2221fdcf206e31a5d9de\",\r\n    \"title\": \"Fish and Chips\",\r\n    \"description\": \"Deep fried fish with french fries\",\r\n    \"ingredients\": [\r\n        \"flour\",\r\n        \"beer\",\r\n        \"fish\",\r\n        \"batter\",\r\n        \"fries\",\r\n        \"dip\"\r\n    ],\r\n    \"instructions\": [\r\n        \"mixing\",\r\n        \"deep-frying\"\r\n    ],\r\n    \"cookingTime\": 60,\r\n    \"difficulty\": \"medium\",\r\n    \"isVegeterian\": false,\r\n    \"category\": \"dinner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes/67dc535b4ef675d76108cde8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"67dc535b4ef675d76108cde8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByCategoryParams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes/category/desert",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"category",
+						"desert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByTitle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes?title=Pizza",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Pizza"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByDifficulty&Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes?difficulty=easy&category=dinner",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "difficulty",
+							"value": "easy"
+						},
+						{
+							"key": "category",
+							"value": "dinner"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByVegetarian",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/recipes?isVegetarian=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "isVegetarian",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
