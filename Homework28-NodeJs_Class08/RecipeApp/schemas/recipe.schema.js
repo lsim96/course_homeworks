@@ -37,8 +37,8 @@ const recipeSchema = new Schema({
   },
   cookingTime: {
     type: Number,
-    minLength: 5,
-    maxLength: 680,
+    min: 5,
+    max: 680,
   },
   difficulty: {
     type: String,

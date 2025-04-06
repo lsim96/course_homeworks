@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "cd342de4-47c1-497c-8c5b-df5fa7894a27",
+		"name": "Class10-Bonus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059463"
+	},
+	"item": [
+		{
+			"name": "AddToCart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"67f28df9c94b8e186e7ddda8\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/carts/67ed38bc69dd4901b707920c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"carts",
+						"67ed38bc69dd4901b707920c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products?name=playstation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "playstation"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Steak\",\r\n        \"description\": \"A steak is a cut of meat sliced across muscle fibers, sometimes including a bone. It is normally grilled or fried, and can be diced or cooked in sauce.\",\r\n        \"price\": 28,\r\n        \"quantity\": 13,\r\n        \"reviews\": 9,\r\n        \"category\": \"meat\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/67f28ea5c94b8e186e7dddad",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"67f28ea5c94b8e186e7dddad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"67f28ea5c94b8e186e7dddad\",\r\n        \"name\": \"Pencil\",\r\n        \"description\": \"A pencil is a writing or drawing implementttt.\",\r\n        \"price\": 1.5,\r\n        \"quantity\": 65,\r\n        \"reviews\": 7,\r\n        \"category\": \"school supplies\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/67f28ea5c94b8e186e7dddad",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"67f28ea5c94b8e186e7dddad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"67f28ea5c94b8e186e7dddad\",\r\n        \"name\": \"Pencil\",\r\n        \"description\": \"A pencil is a writing or drawing implementttt.\",\r\n        \"price\": 1.5,\r\n        \"quantity\": 65,\r\n        \"reviews\": 7,\r\n        \"category\": \"school supplies\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/67f28efc9fc6d3e5ecb83f8d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"67f28efc9fc6d3e5ecb83f8d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
