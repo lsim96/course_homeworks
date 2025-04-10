@@ -23,12 +23,31 @@ export default class CartController {
     }
   }
 
+  async createCart(req, res) {
+    try {
+      const cartBody = req.body;
+      const cart = await this.cartService.create(cartBody);
+      res.status(201).send(cart);
+    } catch (error) {
+      res.status(500).send({ message: error.message });
+    }
+  }
+
   async addProductToCart(req, res) {
     try {
       const cart = await this.cartService.addProduct(
         req.params.cartId,
         req.body.productId
       );
+      res.send(cart);
+    } catch (error) {
+      res.status(500).send({ message: error.message });
+    }
+  }
+
+  async removeProductFromCart(req, res) {
+    try {
+      const cart = await this.cartService.removeProduct(req.params.cartId);
       res.send(cart);
     } catch (error) {
       res.status(500).send({ message: error.message });

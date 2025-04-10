@@ -25,6 +25,10 @@ export default class CartService {
     return cart;
   }
 
+  async create(body) {
+    return Cart.create(body);
+  }
+
   async removeProduct(cartId, productId) {
     const cart = await this.getCartById(cartId);
 

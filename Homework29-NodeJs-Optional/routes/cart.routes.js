@@ -12,4 +12,6 @@ cartRouter.put("/:cartId", (req, res) =>
   cartController.addProductToCart(req, res)
 );
 
+cartRouter.post("/", (req, res) => cartController.createCart(req, res));
+
 export default cartRouter;

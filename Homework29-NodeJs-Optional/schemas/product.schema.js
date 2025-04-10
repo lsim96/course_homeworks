@@ -28,8 +28,13 @@ const productSchema = new Schema({
     required: [true, "Quantity is required"],
   },
   reviews: {
+    type: String,
+    minLength: 10,
+    maxLength: 200,
+  },
+  rating: {
     type: Number,
-    min: 0,
+    min: 1,
     max: 10,
   },
   category: {
