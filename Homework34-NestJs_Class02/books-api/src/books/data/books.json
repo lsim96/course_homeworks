@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "stock": 1,
+    "price": 18,
+    "pages": 304,
+    "id": "b88c6453-053d-468f-9dc2-a703833eec94"
+  },
+  {
+    "title": "Between Two Fires",
+    "author": "Christopher Buehlman",
+    "stock": 5,
+    "price": 24,
+    "pages": 664,
+    "id": "602d1e32-af56-484a-a64e-47469fc8a525"
+  },
+  {
+    "title": "Shogun",
+    "author": "James Clavell",
+    "stock": 2,
+    "price": 21,
+    "pages": 993,
+    "id": "39874e7c-3325-43d4-b205-99f5fd0836fa"
+  },
+  {
+    "title": "Blood Meridian",
+    "author": "Cormac McCarthy",
+    "stock": 1,
+    "price": 14,
+    "pages": 336,
+    "id": "b906824e-6a87-446d-aefb-4d1c251046e8"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoyevsky",
+    "stock": 2,
+    "price": 38,
+    "pages": 889,
+    "id": "d32e03a7-a543-43bf-8c5e-ba9b340ac450"
+  }
+]
