@@ -1,0 +1,48 @@
+[
+  {
+    "roomNumber": 837,
+    "type": "DOUBLE",
+    "price": 64,
+    "isAvailable": true,
+    "ameneties": [
+      "spa",
+      "pool",
+      "gym",
+      "tv",
+      "coffee maker"
+    ],
+    "maxOccupancy": 2,
+    "lastCleaned": "2025-03-23",
+    "id": "645b876a-5a07-45bc-a562-ebe40dec4945"
+  },
+  {
+    "roomNumber": 811,
+    "type": "SUITE",
+    "price": 99,
+    "isAvailable": false,
+    "ameneties": [
+      "spa",
+      "pool",
+      "gym",
+      "tv",
+      "coffee maker"
+    ],
+    "maxOccupancy": 8,
+    "lastCleaned": "2025-04-15",
+    "id": "39017cf8-3274-40bf-a72b-3c5c36b8d966"
+  },
+  {
+    "roomNumber": 811,
+    "type": "SINGLE",
+    "price": 50,
+    "isAvailable": true,
+    "ameneties": [
+      "gym",
+      "tv",
+      "coffee maker"
+    ],
+    "maxOccupancy": 2,
+    "lastCleaned": "2025-04-01",
+    "id": "3794cd73-a7e8-4bfb-9f7e-105304a267d6"
+  }
+]

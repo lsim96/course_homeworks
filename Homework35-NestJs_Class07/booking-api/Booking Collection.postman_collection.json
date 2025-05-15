@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "a3c4927e-e5f2-4c1b-a7f2-dbb54dbf2e46",
+		"name": "Booking Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059463"
+	},
+	"item": [
+		{
+			"name": "GetAllBookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/bookings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookingById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings/b993bd92-305e-4d2e-aa28-af3f60f02136",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings",
+						"b993bd92-305e-4d2e-aa28-af3f60f02136"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByRoom#",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings?roomNumber=954",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "roomNumber",
+							"value": "954"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByAvailability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings?isAvailable=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "isAvailable",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByMinPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings?minPrice=60",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByMaxPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings?maxPrice=65",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "65"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/bookings?type=SUITE",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "SUITE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBooking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomNumber\": 766,\r\n    \"type\": \"SUITE\",\r\n    \"price\": 99,\r\n    \"availability\": 2,\r\n    \"ameneties\": [\r\n        \"spa\",\r\n        \"pool\",\r\n        \"gym\",\r\n        \"tv\"\r\n    ],\r\n    \"maxOccupancy\": 4,\r\n    \"lastCleaned\": \"2025-08-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/bookings/b993bd92-305e-4d2e-aa28-af3f60f02136",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings",
+						"b993bd92-305e-4d2e-aa28-af3f60f02136"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomNumber\": {{$randomInt}},\r\n    \"type\": \"SINGLE\",\r\n    \"price\": 50,\r\n    \"isAvailable\": true,\r\n    \"ameneties\": [ \"gym\", \"tv\", \"coffee maker\"],\r\n    \"maxOccupancy\": 2,\r\n    \"lastCleaned\": \"2025-04-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/bookings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBooking Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomNumber\": 33,\r\n    \"type\": \"SUITE\",\r\n    \"price\": 67,\r\n    \"availability\": 3,\r\n    \"ameneties\": [\"microwave\", \"spa\", \"pool\"],\r\n    \"maxOccupancy\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/bookings/a88fed54-4895-4ea1-a878-f17521470a2c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"bookings",
+						"a88fed54-4895-4ea1-a878-f17521470a2c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
