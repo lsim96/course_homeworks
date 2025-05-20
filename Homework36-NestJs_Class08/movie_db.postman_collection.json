@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "47f5d2d7-f22a-4153-9e88-df450c255c4e",
+		"name": "movie_db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059463"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Reservoir Dogs\",\r\n    \"description\": \"It features an ensemble cast led by Leonardo DiCaprio, Brad Pitt, and Margot Robbie. Set in 1969 Los Angeles, the film follows a fading actor and his stunt double as they navigate the rapidly changing film industry with the threat of the Tate murders looming.\",\r\n    \"releaseYear\": 1992,\r\n    \"genre\": [\"ACTION\", \"THRILLER\"],\r\n    \"duration\": 99,\r\n    \"rating\": 8\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies?rating=ASC",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "rating",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"title\": \"Kil Bill Vol:1\",\r\n        \"description\": \" Kill Bill: Volume 1 is a 2003 American action film written and directed by Quentin Tarantino. It stars Uma Thurman as the Bride, who swears revenge on a group of assassins (Lucy Liu, Daryl Hannah, Vivica A. Fox and Michael Madsen) and their leader, Bill (David Carradine), after they try to kill her and her unborn child. Her journey takes her to Tokyo, where she battles the yakuza.\",\r\n        \"releaseYear\": 2003,\r\n        \"genre\": [\r\n            \"ACTION\"\r\n        ],\r\n        \"duration\": 111,\r\n        \"rating\": 10,\r\n        \"posterUrl\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies/4f645c5b-089e-439b-b320-0b3a1bdd8596",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"4f645c5b-089e-439b-b320-0b3a1bdd8596"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryParams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies?genre=HORROR&maxDuration=110&title=From Dusk Till Dawn&minRating=7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "HORROR"
+						},
+						{
+							"key": "maxDuration",
+							"value": "110"
+						},
+						{
+							"key": "title",
+							"value": "From Dusk Till Dawn"
+						},
+						{
+							"key": "minRating",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortByDuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies?sortByDuration=DESC",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sortByDuration",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortByRating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies?sortByRating=DESC",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sortByRating",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
