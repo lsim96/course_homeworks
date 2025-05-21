@@ -38,15 +38,17 @@ export class MoviesService {
 
     if (filters?.sortByRating) {
       query.orderBy('movie.rating', filters.sortByRating);
-    } else {
-      query.orderBy('movie.rating', 'ASC');
     }
+    //  else {
+    //   query.orderBy('movie.rating', 'ASC');
+    // }
 
     if (filters?.sortByDuration) {
       query.orderBy('movie.duration', filters.sortByDuration);
-    } else {
-      query.orderBy('movie.duration', 'ASC');
     }
+    //  else {
+    //   query.orderBy('movie.duration', 'ASC');
+    // }
 
     return await query.getMany();
   }
