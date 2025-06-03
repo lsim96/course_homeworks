@@ -5,5 +5,5 @@ export interface BookingFilters {
   type?: RoomType | null;
   minPrice?: number | null;
   maxPrice?: number | null;
-  isAvailable?: boolean;
+  isAvailable?: boolean | null;
 }

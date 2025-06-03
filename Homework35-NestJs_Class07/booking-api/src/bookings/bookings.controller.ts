@@ -70,7 +70,7 @@ export class BookingsController {
       roomNumber: !Number.isNaN(Number(roomNumber)) ? Number(roomNumber) : null,
       minPrice: !Number.isNaN(Number(minPrice)) ? Number(minPrice) : null,
       maxPrice: !Number.isNaN(Number(maxPrice)) ? Number(maxPrice) : null,
-      isAvailable: !!isAvailable,
+      isAvailable: isAvailable === "true" ? true : isAvailable === "false" ? false : null,
       type: Object.values(RoomType).includes(type as RoomType)
         ? (type as RoomType)
         : null,
