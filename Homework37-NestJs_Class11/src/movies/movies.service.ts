@@ -97,6 +97,7 @@ export class MoviesService {
         ...movieData,
         director: { id: foundDirector.id },
         actors: mappedActors,
+        createdBy: createMovieDto.createdBy,
       });
 
       await this.moviesRepo.save(newMovie);

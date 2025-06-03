@@ -80,4 +80,8 @@ export class CreateMovieDto {
   @IsArray()
   @IsUUID('4', { each: true })
   actors: string[];
+
+  @IsString()
+  @IsOptional()
+  createdBy?: string;
 }

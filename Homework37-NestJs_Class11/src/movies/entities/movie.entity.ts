@@ -76,4 +76,7 @@ export class Movie {
     name: 'movie_actors',
   })
   actors: Actor[];
+
+  @Column()
+  createdBy?: string;
 }

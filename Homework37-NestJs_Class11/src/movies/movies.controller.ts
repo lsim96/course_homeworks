@@ -10,6 +10,7 @@ import {
   Patch,
   Post,
   Query,
+  Req,
   UseGuards,
 } from '@nestjs/common';
 import { MoviesService } from './movies.service';
@@ -65,8 +66,10 @@ export class MoviesController {
   @HttpCode(201)
   @Post()
   @ApiOperation({ summary: 'Endpoint that creates a movie' })
-  create(@Body() createData: CreateMovieDto) {
-    return this.moviesService.create(createData);
+  create(@Body() createData: CreateMovieDto, @Req() req: Request) {
+    const userEmail = (req as any).user.email;
+
+    return this.moviesService.create({ ...createData, createdBy: userEmail });
   }
 
   //Update movie

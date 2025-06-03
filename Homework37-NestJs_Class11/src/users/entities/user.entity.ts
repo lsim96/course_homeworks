@@ -20,7 +20,7 @@ export class User {
   })
   firstName: string;
 
-  @Column({ default: RoleType.USER })
+  @Column({ default: RoleType.ADMIN })
   role: RoleType;
 
   @Column({
