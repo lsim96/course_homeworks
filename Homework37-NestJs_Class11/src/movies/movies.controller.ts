@@ -45,14 +45,14 @@ export class MoviesController {
   @ApiInternalServerErrorResponse({
     description: "The server couldn't fetch the movies",
   })
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   findAll(@Query() filters: MovieFilters) {
     return this.moviesService.findAll(filters);
   }
 
   //Get movie by id
 
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   @HttpCode(200)
   @Get(':id')
   @ApiOperation({ summary: 'Endpoint that fetches a movie by id' })
@@ -62,7 +62,7 @@ export class MoviesController {
 
   //Create a booking
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(201)
   @Post()
   @ApiOperation({ summary: 'Endpoint that creates a movie' })
@@ -74,7 +74,7 @@ export class MoviesController {
 
   //Update movie
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Patch(':id')
   @ApiOperation({ summary: 'Endpoint that updates a movie' })
@@ -84,7 +84,7 @@ export class MoviesController {
 
   //Delete movie
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Delete(':id')
   @ApiOperation({ summary: 'Endpoint that deletes a movie' })

@@ -69,7 +69,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"Michael Pitt\",\r\n    \"birthYear\": 1981\r\n}",
+							"raw": "{\r\n    \"fullName\": \"Jennifer Connelly\",\r\n    \"birthYear\": 1970\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,7 +94,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmM2JlMjdlYi0xNGM1LTQwMTktYjU2Yi00YjUyZTEwNTUxYTYiLCJpYXQiOjE3NDg5ODA2NzUsImV4cCI6MTc0ODk4MTg3NX0.BqYze8Xj05ngU1PZP_3iOJXkqRIyVzoIDpyNru9GfsQ",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWQ3ZmFiNy05ZTAwLTQ1ZTItYjY4ZC1hMDkwNGZkZTU4YzkiLCJpYXQiOjE3NDkxMTQ5ODQsImV4cCI6MTc0OTExNjE4NH0.Zcymt5Ww1pYJGeN7ftEdaZ9Ylkr_5mHZg4NKdjwD31g",
 						"type": "string"
 					}
 				]
@@ -242,7 +242,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"Mike Cahill\",\r\n    \"birthYear\": 1979\r\n}",
+							"raw": "{\r\n    \"fullName\": \"Ron Howard\",\r\n    \"birthYear\": 1954\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -308,7 +308,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmM2JlMjdlYi0xNGM1LTQwMTktYjU2Yi00YjUyZTEwNTUxYTYiLCJpYXQiOjE3NDg5ODA3NDksImV4cCI6MTc0ODk4MTk0OX0.qf38OPhII3qc2Zwm26f9r24i64hociZbNIr__KoIhfA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWQ3ZmFiNy05ZTAwLTQ1ZTItYjY4ZC1hMDkwNGZkZTU4YzkiLCJpYXQiOjE3NDkxMTQ5ODQsImV4cCI6MTc0OTExNjE4NH0.Zcymt5Ww1pYJGeN7ftEdaZ9Ylkr_5mHZg4NKdjwD31g",
 						"type": "string"
 					}
 				]
@@ -525,7 +525,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"From Dusk Till Dawn\",\r\n    \"description\": \"Starring Harvey Keitel, George Clooney, Tarantino, Ernest Liu, and Juliette Lewis, the plot follows a pair of American criminal brothers (Clooney and Tarantino), who take a family as hostages (Keitel, Liu and Lewis) to cross into Mexico, but ultimately find themselves trapped in a saloon, defending against a horde of vampires.\",\r\n    \"releaseYear\": 1996,\r\n    \"genre\": [\"ACTION\", \"HORROR\", \"THRILLER\"],\r\n    \"duration\": 108,\r\n    \"rating\": 7,\r\n    \"director\": \"1dcaa006-fa73-4816-a99a-2f629334967e\",\r\n    \"actors\": [\"a5d9788d-b105-4a78-936a-574317c0cee2\", \"84e560c0-d286-49fc-bd1d-b441f7b926b0\", \"22ac8de8-408e-424d-9daf-83fde4112870\"]\r\n}",
+							"raw": "{\r\n    \"title\": \"A Beautiful Mind\",\r\n    \"description\": \"The story begins in Nash's days as a brilliant but asocial mathematics graduate student at Princeton University. After Nash accepts secretive work in cryptography, he becomes liable to a larger conspiracy and begins to question his reality.\",\r\n    \"releaseYear\": 2001,\r\n    \"genre\": [\"DRAMA\", \"COMEDY\", \"ROMANCE\"],\r\n    \"duration\": 135,\r\n    \"rating\": 8,\r\n    \"director\": \"c480bd04-a665-46c0-97fd-f212c9de5cb0\",\r\n    \"actors\": [\"dde41ad9-d99a-451e-b9c3-927efc6fa645\", \"5229b351-b79a-45eb-9faf-2f6eccf9133a\"]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -616,7 +616,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiZGI5ZTJiYi0xNjU2LTRhZTQtOTU3OC0xY2RlNjU3NzU2MTMiLCJpYXQiOjE3NDg5ODA5NzgsImV4cCI6MTc0ODk4MjE3OH0.FyZzdK3X1b2Tne6IfoxcfDBAMLcsJXodMrO1D22eRSA",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWQ3ZmFiNy05ZTAwLTQ1ZTItYjY4ZC1hMDkwNGZkZTU4YzkiLCJpYXQiOjE3NDkxMTQ5ODQsImV4cCI6MTc0OTExNjE4NH0.Zcymt5Ww1pYJGeN7ftEdaZ9Ylkr_5mHZg4NKdjwD31g",
 						"type": "string"
 					}
 				]

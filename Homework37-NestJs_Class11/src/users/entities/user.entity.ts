@@ -20,8 +20,8 @@ export class User {
   })
   firstName: string;
 
-  @Column({ default: RoleType.USER })
-  role: RoleType;
+  @Column('text', { array: true, default: [RoleType.USER] })
+  role: RoleType[];
 
   @Column({
     name: 'last_name',

@@ -22,32 +22,32 @@ import { Roles } from 'src/roles/roles.decorator';
 export class DirectorController {
   constructor(private directorsService: DirectorService) {}
 
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   @Get()
   findAll() {
     return this.directorsService.findAll();
   }
 
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   @Get(':id')
   findById(@Param('id') id: string) {
     return this.directorsService.findById(id);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @Post()
   create(@Body() createDirector: CreateDirectorDto) {
     return this.directorsService.create(createDirector);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateDirector: UpdateDirectorDto) {
     return this.directorsService.updateDirector(id, updateDirector);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Delete(':id')
   delete(@Param('id') id: string) {

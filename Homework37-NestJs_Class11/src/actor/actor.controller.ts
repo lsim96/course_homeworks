@@ -22,38 +22,38 @@ import { Roles } from 'src/roles/roles.decorator';
 export class ActorController {
   constructor(private actorService: ActorService) {}
 
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   @Get()
   findAll() {
     return this.actorService.findAll();
   }
 
-  @Roles(RoleType.USER)
+  @Roles([RoleType.USER, RoleType.ADMIN])
   @Get(':id')
   findById(@Param('id') id: string) {
     return this.actorService.findById(id);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @Get(':id/details')
   findDetails(@Param('id') id: string) {
     return this.actorService.findActorDetails(id);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @Post()
   create(@Body() createData: CreateActorDto) {
     return this.actorService.create(createData);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateData: UpdateActorDto) {
     return this.actorService.updateActor(id, updateData);
   }
 
-  @Roles(RoleType.ADMIN)
+  @Roles([RoleType.ADMIN])
   @HttpCode(204)
   @Delete()
   delete(@Param('id') id: string) {
