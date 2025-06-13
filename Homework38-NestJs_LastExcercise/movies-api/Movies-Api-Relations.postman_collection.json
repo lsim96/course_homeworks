@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "f6355024-5fc3-4558-9212-141ca8d3819c",
+		"name": "Movies-Api-Relations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43059463"
+	},
+	"item": [
+		{
+			"name": "GetMovieAwards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/:id/awards",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						":id",
+						"awards"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductCo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/production-companies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"production-companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductCoById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/production-companies/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"production-companies",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductCoById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/meta-data",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"meta-data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
