@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Russia",
+    "capital": "Moscow",
+    "continent": "Europe",
+    "area": 17098242,
+    "population": "143.8 million",
+    "landlocked": false
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "continent": "Europe",
+    "area": 551695,
+    "population": "68.29 million",
+    "landlocked": false
+  },
+  {
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "continent": "Europe",
+    "area": 4676,
+    "population": "68.29 million",
+    "landlocked": true
+  },
+  {
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "continent": "Asia",
+    "area": 2700000,
+    "population": "20.33 million",
+    "landlocked": true
+  },
+  {
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "continent": "Asia",
+    "area": 513120,
+    "population": "71.7 million",
+    "landlocked": false
+  },
+  {
+    "name": "Morocco",
+    "capital": "Rabat",
+    "continent": "Africa",
+    "area": 446550,
+    "population": "37.71 million",
+    "landlocked": false
+  },
+  {
+    "name": "Namibia",
+    "capital": "Windhoek",
+    "continent": "Africa",
+    "area": 824292,
+    "population": "2.963 million",
+    "landlocked": false
+  },
+  {
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "continent": "Americas",
+    "area": 2780085,
+    "population": "45.54 million",
+    "landlocked": false
+  },
+  {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "continent": "Americas",
+    "area": 1972550,
+    "population": "129.7 million",
+    "landlocked": false
+  },
+  {
+    "name": "New Zeland",
+    "capital": "Wellington",
+    "continent": "Oceania",
+    "area": 268021,
+    "population": "5.223 million",
+    "landlocked": false
+  }
+]

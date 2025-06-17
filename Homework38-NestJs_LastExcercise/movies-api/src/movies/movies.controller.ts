@@ -26,6 +26,11 @@ export class MoviesController {
     return this.moviesService.findAll();
   }
 
+  @Get('/meta-data')
+  getMetaData() {
+    return this.moviesService.getMetaData();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.moviesService.findOne(+id);
@@ -34,11 +39,6 @@ export class MoviesController {
   @Get('/genre/count')
   getMoviesCountByGenre() {
     return this.moviesService.getMovieCountByGenre();
-  }
-
-  @Get('/meta-data')
-  getMetaData() {
-    return this.moviesService.getMetaData();
   }
 
   @Get(':id/awards')

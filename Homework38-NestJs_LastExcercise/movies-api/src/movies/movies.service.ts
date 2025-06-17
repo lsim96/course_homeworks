@@ -70,6 +70,7 @@ export class MoviesService {
       .addSelect('AVG(movie.budget)', 'avgBudget')
       .getRawMany();
 
+    console.log(response);
     return response.map((r) => ({
       ...r,
       movieCount: Number(r.movieCount),

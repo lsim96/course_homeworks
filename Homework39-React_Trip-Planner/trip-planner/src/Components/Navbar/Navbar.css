@@ -1,0 +1,20 @@
+.Navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.Navbar li {
+  font-size: 1.5rem;
+}
+
+.Navbar li a {
+  text-decoration: none;
+  color: #7cbbbb;
+}
+
+.Navbar li a:hover {
+  text-decoration: underline;
+}

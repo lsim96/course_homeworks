@@ -1,0 +1,10 @@
+.Header {
+  margin: 20px;
+  border: 2px solid #474954;
+  border-radius: 5px;
+}
+
+.Header h1 {
+  font-size: 4rem;
+  text-align: center;
+}
