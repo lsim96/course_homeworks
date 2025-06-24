@@ -1,0 +1,8 @@
+.countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px auto;
+  gap: 10px;
+  justify-content: center;
+  width: 400px;
+}

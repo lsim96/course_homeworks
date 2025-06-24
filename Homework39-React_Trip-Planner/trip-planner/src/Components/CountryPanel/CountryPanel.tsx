@@ -2,25 +2,25 @@ import "./CountryPanel.css";
 import type { Country } from "../../models/country.model";
 
 interface CountryPanelProps {
-  Country: Country;
+  country: Country;
 }
 
-function CountryPanel({ Country }: CountryPanelProps) {
+function CountryPanel({ country }: CountryPanelProps) {
   return (
     <div className="panel">
-      <h1>{Country.name}</h1>
+      <h1>{country.name}</h1>
       <div className="card">
         <ul className="capital">
-          <h2>Capital</h2>
-          <li>{Country.capital}</li>
+          <h2>Capital:</h2>
+          <li>{country.capital}</li>
         </ul>
         <ul className="continent">
-          <h2>Continent</h2>
-          <li>{Country.continent}</li>
+          <h2>Continent:</h2>
+          <li>{country.continent}</li>
         </ul>
         <ul className="population">
-          <h2>Population</h2>
-          <li>{Country.population}</li>
+          <h2>Population:</h2>
+          <li>{country.population}</li>
         </ul>
       </div>
     </div>

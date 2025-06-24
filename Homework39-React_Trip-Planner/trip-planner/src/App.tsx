@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
-import Main from "./Layout/Main/Main";
+import CountriesPage from "./Pages/CountriesPage/CountriesPage";
 
 function App() {
   const linkData: string[] = [
@@ -16,7 +16,7 @@ function App() {
 
   const headerTitle = "Trip Planner";
 
-  const [page, setPage] = useState<string | null>(null);
+  const [page, setPage] = useState<string>("");
 
   return (
     <div className="App">
@@ -28,9 +28,9 @@ function App() {
         continents={linkData}
       />
       <main>
-        <Main title="10 Most popular tourist destinations" page={page} />
+        <h1>10 Most popular tourist destinations</h1>
+        <CountriesPage page={page} />
       </main>
-
       <Footer />
     </div>
   );
