@@ -78,5 +78,85 @@
     "area": 268021,
     "population": "5.223 million",
     "landlocked": false
+  },
+  {
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "continent": "Europe",
+    "area": 88361,
+    "population": "6.623 million",
+    "landlocked": true
+  },
+  {
+    "name": "Turkey",
+    "capital": "Ankara",
+    "continent": "Asia",
+    "area": 783562,
+    "population": "85.33 million",
+    "landlocked": false
+  },
+  {
+    "name": "Costa Rica",
+    "capital": "San Jose",
+    "continent": "Americas",
+    "area": 51100,
+    "population": "5.106 million",
+    "landlocked": false
+  },
+  {
+    "name": "Chile",
+    "capital": "Santiago",
+    "continent": "Americas",
+    "area": 756626,
+    "population": "19.66 million",
+    "landlocked": false
+  },
+  {
+    "name": "Bolivia",
+    "capital": "Sucre",
+    "continent": "Americas",
+    "area": 88361,
+    "population": "12.24 million",
+    "landlocked": true
+  },
+  {
+    "name": "Maldives",
+    "capital": "Male",
+    "continent": "Asia",
+    "area": 2978,
+    "population": "525.994 thousand",
+    "landlocked": false
+  },
+  {
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "continent": "Asia",
+    "area": 270000,
+    "population": "20.33 million",
+    "landlocked": true
+  },
+  {
+    "name": "Estonia",
+    "capital": "Tallin",
+    "continent": "Europe",
+    "area": 45335,
+    "population": "1.37 million",
+    "landlocked": false
+  },
+  {
+    "name": "Vanuatu",
+    "capital": "Porta Vila",
+    "continent": "Oceania",
+    "area": 12189,
+    "population": "320.409 thousand",
+    "landlocked": false
+  },
+  {
+    "name": "Tonga",
+    "capital": "Nuku'alofa",
+    "continent": "Oceania",
+    "area": 748,
+    "population": "104,597 thousand",
+    "landlocked": false
   }
 ]
