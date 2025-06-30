@@ -34,13 +34,18 @@ function CountriesPage({ page }: CountriesPageProps) {
   };
 
   return (
-    <div>
-      {page === "" && <SearchBar onSearch={handleSearch} />}
+    <div className="countries">
+      {(page === "" && <SearchBar onSearch={handleSearch} />
+        ? filteredCountries.slice(0, 10)
+        : filteredCountries
+      ).map((country) => (
+        <CountryPanel key={country.name} country={country} />
+      ))}
+      {/* {page === "" && <SearchBar onSearch={handleSearch} />}
       <div className="countries">
         {filteredCountries.map((country) => (
           <CountryPanel key={country.name} country={country} />
-        ))}
-      </div>
+        ))} */}
     </div>
   );
 }
