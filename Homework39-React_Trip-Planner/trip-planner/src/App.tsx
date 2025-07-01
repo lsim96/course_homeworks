@@ -3,15 +3,16 @@ import "./App.css";
 import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
 import CountriesPage from "./Pages/CountriesPage/CountriesPage";
+import { Route, Routes } from "react-router";
 
 function App() {
-  const linkData: string[] = [
-    "Home",
-    "Asia",
-    "Americas",
-    "Europe",
-    "Africa",
-    "Oceania",
+  const linkData = [
+    { page: "Home", path: "/" },
+    { page: "Asia", path: "/asia" },
+    { page: "Americas", path: "/americas" },
+    { page: "Europe", path: "/europe" },
+    { page: "Africa", path: "/africa" },
+    { page: "Oceania", path: "/oceania" },
   ];
 
   const headerTitle = "Trip Planner";
@@ -29,7 +30,14 @@ function App() {
       />
       <main>
         <h1>10 Most popular tourist destinations</h1>
-        <CountriesPage page={page} />
+        <Routes>
+          <Route path="/" element={<CountriesPage page={page} />}></Route>
+          <Route path="/asia" element={<CountriesPage page={page} />}></Route>
+          <Route path="/americas" element={<CountriesPage page={page}/>}></Route>
+          <Route path="/europe" element={<CountriesPage page={page}/>}></Route>
+          <Route path="/africa" element={<CountriesPage page={page}/>}></Route>
+          <Route path="/oceania" element={<CountriesPage page={page}/>}></Route>
+        </Routes>
       </main>
       <Footer />
     </div>

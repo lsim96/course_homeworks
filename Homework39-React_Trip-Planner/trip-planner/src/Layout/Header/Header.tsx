@@ -1,10 +1,10 @@
 import Navbar from "../../Components/Navbar/Navbar";
-
+import type { LinkModels } from "../../models/links.model";
 import "./Header.css";
 
 interface HeaderProps {
   title: string;
-  continents: string[];
+  continents: LinkModels[];
   onClickedContinent: (continent: string) => void;
 }
 

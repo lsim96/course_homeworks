@@ -1,7 +1,8 @@
 import "./Navbar.css";
+import type { LinkModels } from "../../models/links.model";
 
 interface NavbarProps {
-  linkData: string[];
+  linkData: LinkModels[];
   onClickedContinent: (continent: string) => void;
 }
 
@@ -14,10 +15,10 @@ function Navbar({ linkData, onClickedContinent }: NavbarProps) {
             <a
               href="#"
               onClick={() => {
-                onClickedContinent(link);
+                onClickedContinent(link.page);
               }}
             >
-              {link}
+              {link.page}
             </a>
           </li>
         ))}
