@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
@@ -17,26 +16,30 @@ function App() {
 
   const headerTitle = "Trip Planner";
 
-  const [page, setPage] = useState<string>("");
-
   return (
     <div className="App">
-      <Header
-        onClickedContinent={(continent) =>
-          setPage(continent === "Home" ? "" : continent)
-        }
-        title={headerTitle}
-        continents={linkData}
-      />
+      <Header title={headerTitle} continents={linkData} />
       <main>
         <h1>10 Most popular tourist destinations</h1>
         <Routes>
-          <Route path="/" element={<CountriesPage page={page} />}></Route>
-          <Route path="/asia" element={<CountriesPage page={page} />}></Route>
-          <Route path="/americas" element={<CountriesPage page={page}/>}></Route>
-          <Route path="/europe" element={<CountriesPage page={page}/>}></Route>
-          <Route path="/africa" element={<CountriesPage page={page}/>}></Route>
-          <Route path="/oceania" element={<CountriesPage page={page}/>}></Route>
+          <Route path="/" element={<CountriesPage page={""} />}></Route>
+          <Route path="/asia" element={<CountriesPage page={"Asia"} />}></Route>
+          <Route
+            path="/americas"
+            element={<CountriesPage page={"Americas"} />}
+          ></Route>
+          <Route
+            path="/europe"
+            element={<CountriesPage page={"Europe"} />}
+          ></Route>
+          <Route
+            path="/africa"
+            element={<CountriesPage page={"Africa"} />}
+          ></Route>
+          <Route
+            path="/oceania"
+            element={<CountriesPage page={"Oceania"} />}
+          ></Route>
         </Routes>
       </main>
       <Footer />
