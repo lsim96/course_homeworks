@@ -1,51 +1,43 @@
 import "./CountriesPage.css";
-import countryData from "../../data/countries.json";
+
 import CountryPanel from "../../Components/CountryPanel/CountryPanel";
-import { useMemo, useState } from "react";
+import { useContext, useState } from "react";
 import SearchBar from "../../Components/SearchBar/SearchBar";
+import { CountriesContext } from "../../Contexts/CountriesContext";
 
 interface CountriesPageProps {
   page: string;
 }
 
 function CountriesPage({ page }: CountriesPageProps) {
-  // const filteredCountries = page
-  //   ? countryData.filter((country) => country.continent === page)
-  //   : countryData;
-
+  const { countries } = useContext(CountriesContext);
   const [input, setInput] = useState("");
 
-  const filteredCountries = useMemo(() => {
-    let result = countryData;
+  let filteredCountries = countries;
 
-    if (page) {
-      result = result.filter((country) => country.continent === page);
-    } else if (input.trim()) {
-      result = result.filter((country) =>
-        country.name.toLowerCase().includes(input.toLowerCase())
-      );
-    }
-
-    return result;
-  }, [page, input]);
+  if (page !== "") {
+    filteredCountries = filteredCountries.filter(
+      (country) => country.region === page
+    );
+  } else {
+    filteredCountries = filteredCountries.filter((country) =>
+      country.name.common.toLowerCase().includes(input.toLowerCase())
+    );
+  }
+  filteredCountries = filteredCountries.slice(0, 10);
 
   const handleSearch = (input: string) => {
     setInput(input);
   };
 
   return (
-    <div className="countries">
-      {(page === "" && <SearchBar onSearch={handleSearch} />
-        ? filteredCountries.slice(0, 10)
-        : filteredCountries
-      ).map((country) => (
-        <CountryPanel key={country.name} country={country} />
-      ))}
-      {/* {page === "" && <SearchBar onSearch={handleSearch} />}
-      <div className="countries">
+    <div>
+      {page === "" && <SearchBar onSearch={handleSearch} />}
+      <section className="countries">
         {filteredCountries.map((country) => (
-          <CountryPanel key={country.name} country={country} />
-        ))} */}
+          <CountryPanel key={country.name.common} country={country} />
+        ))}
+      </section>
     </div>
   );
 }

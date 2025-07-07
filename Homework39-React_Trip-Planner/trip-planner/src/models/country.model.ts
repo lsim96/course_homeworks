@@ -1,9 +1,14 @@
 export interface Country {
-  name: string;
-  capital: string;
-  continent: string;
+  name: {
+    common: string;
+  };
+  capital: string[];
+  region: string;
   area: number;
-  // flag: string;
-  population: string;
+  flags: {
+    png: string;
+    alt: string;
+  };
+  population: number;
   landlocked: boolean;
 }
