@@ -10,5 +10,7 @@ export interface Country {
     alt: string;
   };
   population: number;
+  inTripPlanner: boolean;
   landlocked: boolean;
+  days: number;
 }

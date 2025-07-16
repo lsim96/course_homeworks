@@ -1,11 +1,16 @@
 import "./CountryPanel.css";
 import type { Country } from "../../models/country.model";
+import Button from "../Button/Button";
+import { useContext } from "react";
+import { CountriesContext } from "../../Contexts/CountriesContext";
 
 interface CountryPanelProps {
   country: Country;
 }
 
 function CountryPanel({ country }: CountryPanelProps) {
+  const { addToTripPlanner } = useContext(CountriesContext);
+
   return (
     <div
       className="panel"
@@ -24,6 +29,18 @@ function CountryPanel({ country }: CountryPanelProps) {
         <ul className="population">
           <h2>Population:</h2>
           <li>{country.population}</li>
+          <Button
+            disabled={country.inTripPlanner}
+            onBtnClick={() => {
+              addToTripPlanner(country);
+            }}
+          >
+            {country.inTripPlanner ? (
+              "ADDED"
+            ) : (
+              <i className="fa-solid fa-plane"></i>
+            )}
+          </Button>
         </ul>
       </div>
     </div>

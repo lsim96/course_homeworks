@@ -1,0 +1,29 @@
+.PageItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c58882;
+  border-radius: 20px 0;
+  border: 3px solid;
+  width: 600px;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+h3 {
+  padding: 10px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

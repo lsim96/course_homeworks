@@ -4,12 +4,24 @@ import { httpService } from "../services/http.service";
 
 interface CountriesContexInterface {
   countries: Country[];
+  addToTripPlanner: (selectedCountry: Country) => void;
+  removeFromTripPlanner: (selectedCountry: Country) => void;
+  addCountryDays: (selectedCountry: Country) => void;
+  removeCountryDays: (selectedCountry: Country) => void;
   fetchCountries: () => Promise<void>;
+  getCountriesInTripPlanner: () => Country[];
 }
 
 export const CountriesContext = createContext<CountriesContexInterface>({
   countries: [],
+  addToTripPlanner() {},
   async fetchCountries() {},
+  getCountriesInTripPlanner() {
+    return [];
+  },
+  removeFromTripPlanner() {},
+  addCountryDays() {},
+  removeCountryDays() {},
 });
 
 function ContriesProvider({ children }: { children: ReactNode }) {
@@ -25,6 +37,8 @@ function ContriesProvider({ children }: { children: ReactNode }) {
       setCountries(
         countries.map((country) => ({
           ...country,
+          inTripPlanner: false,
+          days: 0,
         }))
       );
     } catch (error) {
@@ -32,16 +46,67 @@ function ContriesProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const addToTripPlanner = (selectedCountry: Country) => {
+    setCountries((prevCountry) => {
+      return prevCountry.map((country) => {
+        if (selectedCountry.name.common === country.name.common) {
+          country.inTripPlanner = true;
+          country.days = 1;
+          return country;
+        }
+        return country;
+      });
+    });
+  };
+
+  const removeFromTripPlanner = (selectedCountry: Country) => {
+    setCountries((prevCountries) =>
+      prevCountries.map((country) =>
+        country.name.common === selectedCountry.name.common
+          ? { ...country, inTripPlanner: false, days: 0 }
+          : country
+      )
+    );
+  };
+
+  const addCountryDays = (selectedCountry: Country) => {
+    setCountries((prevCountries) =>
+      prevCountries.map((country) =>
+        country.name.common === selectedCountry.name.common
+          ? { ...country, days: country.days + 1 }
+          : country
+      )
+    );
+  };
+
+  const removeCountryDays = (selectedCountry: Country) => {
+    setCountries((prevCountries) =>
+      prevCountries.map((country) =>
+        country.name.common === selectedCountry.name.common
+          ? { ...country, days: country.days - 1 }
+          : country
+      )
+    );
+  };
+
   useEffect(() => {
     fetchCountries();
   }, []);
+
+  const getCountriesInTripPlanner = () =>
+    countries.filter((country) => country.inTripPlanner);
 
   return (
     <>
       <CountriesContext.Provider
         value={{
           countries,
+          addToTripPlanner,
           fetchCountries,
+          getCountriesInTripPlanner,
+          removeFromTripPlanner,
+          addCountryDays,
+          removeCountryDays,
         }}
       >
         {children}

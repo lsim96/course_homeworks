@@ -3,6 +3,7 @@ import Footer from "./Layout/Footer/Footer";
 import Header from "./Layout/Header/Header";
 import CountriesPage from "./Pages/CountriesPage/CountriesPage";
 import { Route, Routes } from "react-router";
+import { TripPage } from "./Pages/TripPage/TripPage";
 
 function App() {
   const linkData = [
@@ -12,6 +13,7 @@ function App() {
     { page: "Europe", path: "/europe" },
     { page: "Africa", path: "/africa" },
     { page: "Oceania", path: "/oceania" },
+    { page: "Trip Page", path: "/trip-page" },
   ];
 
   const headerTitle = "Trip Planner";
@@ -40,6 +42,7 @@ function App() {
             path="/oceania"
             element={<CountriesPage page={"Oceania"} />}
           ></Route>
+          <Route path="/trip-page" element={<TripPage />}></Route>
         </Routes>
       </main>
       <Footer />
