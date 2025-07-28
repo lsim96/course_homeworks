@@ -4,6 +4,8 @@ import Header from "./Layout/Header/Header";
 import CountriesPage from "./Pages/CountriesPage/CountriesPage";
 import { Route, Routes } from "react-router";
 import { TripPage } from "./Pages/TripPage/TripPage";
+import { TripInfoPage } from "./Pages/TripInfoPage/TripInfo";
+import { TripViewPage } from "./Pages/TripViewPage/TripViewPage";
 
 function App() {
   const linkData = [
@@ -14,6 +16,7 @@ function App() {
     { page: "Africa", path: "/africa" },
     { page: "Oceania", path: "/oceania" },
     { page: "Trip Page", path: "/trip-page" },
+    { page: "Trip View", path: "/trip-view" },
   ];
 
   const headerTitle = "Trip Planner";
@@ -43,6 +46,8 @@ function App() {
             element={<CountriesPage page={"Oceania"} />}
           ></Route>
           <Route path="/trip-page" element={<TripPage />}></Route>
+          <Route path="/trip-info" element={<TripInfoPage />}></Route>
+          <Route path="/trip-view" element={<TripViewPage />}></Route>
         </Routes>
       </main>
       <Footer />

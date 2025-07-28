@@ -1,44 +1,46 @@
 import { useContext } from "react";
-import type { Country } from "../../models/country.model";
 import "./PageItem.css";
 import { CountriesContext } from "../../Contexts/CountriesContext";
 import Button from "../Button/Button";
+import type { TripPlanner } from "../../models/trip.model";
 
 interface PageItemProps {
-  country: Country;
+  plannedCountry: TripPlanner;
 }
 
-function PageItem({ country }: PageItemProps) {
+function PageItem({ plannedCountry }: PageItemProps) {
   const { removeFromTripPlanner, addCountryDays, removeCountryDays } =
     useContext(CountriesContext);
 
   return (
     <div
       className="PageItem"
-      style={{ borderColor: country.landlocked ? "green" : "blue" }}
+      style={{
+        borderColor: plannedCountry.country.landlocked ? "green" : "blue",
+      }}
     >
-      <h3>{country.name.common}</h3>
+      <h3>{plannedCountry.country.name.common}</h3>
       <div className="wrapper">
         <Button
-          disabled={country.days === 1}
+          disabled={plannedCountry.days === 1}
           onBtnClick={() => {
-            removeCountryDays(country);
+            removeCountryDays(plannedCountry);
           }}
         >
           <i className="fa-solid fa-minus"></i>
         </Button>
-        <div className="days"> {country.days} days</div>
+        <div className="days"> {plannedCountry.days} days</div>
         <Button
-          disabled={country.days === 30}
+          disabled={plannedCountry.days === 30}
           onBtnClick={() => {
-            addCountryDays(country);
+            addCountryDays(plannedCountry);
           }}
         >
           <i className="fa-solid fa-plus"></i>
         </Button>
         <Button
           onBtnClick={() => {
-            removeFromTripPlanner(country);
+            removeFromTripPlanner(plannedCountry);
           }}
         >
           <i className="fa-solid fa-eraser"></i>

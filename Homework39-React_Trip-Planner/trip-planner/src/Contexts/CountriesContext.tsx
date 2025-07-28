@@ -1,24 +1,33 @@
 import { createContext, useEffect, useState, type ReactNode } from "react";
 import type { Country } from "../models/country.model";
 import { httpService } from "../services/http.service";
+import type { Trip, TripPlanner } from "../models/trip.model";
 
 interface CountriesContexInterface {
   countries: Country[];
+  tripPlanner: TripPlanner[];
+  trips: Trip[];
   addToTripPlanner: (selectedCountry: Country) => void;
-  removeFromTripPlanner: (selectedCountry: Country) => void;
-  addCountryDays: (selectedCountry: Country) => void;
-  removeCountryDays: (selectedCountry: Country) => void;
+  createTrip: (trip: Trip) => void;
+  removeFromTripPlanner: (selectedCountry: TripPlanner) => void;
+  addCountryDays: (selectedCountry: TripPlanner) => void;
+  removeCountryDays: (selectedCountry: TripPlanner) => void;
   fetchCountries: () => Promise<void>;
-  getCountriesInTripPlanner: () => Country[];
+  getCountriesInTripPlanner: () => TripPlanner[];
+  resetTripPlanner: () => void;
 }
 
 export const CountriesContext = createContext<CountriesContexInterface>({
   countries: [],
+  tripPlanner: [],
+  trips: [],
+  createTrip: () => {},
   addToTripPlanner() {},
   async fetchCountries() {},
   getCountriesInTripPlanner() {
     return [];
   },
+  resetTripPlanner() {},
   removeFromTripPlanner() {},
   addCountryDays() {},
   removeCountryDays() {},
@@ -26,6 +35,8 @@ export const CountriesContext = createContext<CountriesContexInterface>({
 
 function ContriesProvider({ children }: { children: ReactNode }) {
   const [countries, setCountries] = useState<Country[]>([]);
+  const [tripPlanner, setTripPlanner] = useState<TripPlanner[]>([]);
+  const [trips, setTrips] = useState<Trip[]>([]);
 
   const fetchCountries = async () => {
     try {
@@ -34,76 +45,171 @@ function ContriesProvider({ children }: { children: ReactNode }) {
       );
       const countries: Country[] = data;
 
-      setCountries(
-        countries.map((country) => ({
-          ...country,
-          inTripPlanner: false,
-          days: 0,
-        }))
-      );
+      setCountries(countries);
     } catch (error) {
       console.log(error);
     }
   };
 
   const addToTripPlanner = (selectedCountry: Country) => {
-    setCountries((prevCountry) => {
-      return prevCountry.map((country) => {
-        if (selectedCountry.name.common === country.name.common) {
-          country.inTripPlanner = true;
-          country.days = 1;
-          return country;
-        }
-        return country;
-      });
+    const countryExist = tripPlanner.some(
+      (tripPlanner) =>
+        tripPlanner.country.name.common === selectedCountry.name.common
+    );
+
+    if (countryExist) {
+      return;
+    }
+
+    const updatedTrip: TripPlanner[] = [
+      ...tripPlanner,
+      { country: selectedCountry, days: 1 },
+    ];
+
+    setTripPlanner(updatedTrip);
+
+    localStorage.setItem("tripPlanner", JSON.stringify(updatedTrip));
+
+    // console.log(country)
+  };
+
+  const removeFromTripPlanner = (selectedCountry: TripPlanner) => {
+    const tripPlannerStorage = localStorage.getItem("tripPlanner");
+
+    if (tripPlannerStorage) {
+      const filteredTripPlanner = JSON.parse(tripPlannerStorage).filter(
+        (tripPlanner: TripPlanner) =>
+          tripPlanner.country.name.common !==
+          selectedCountry.country.name.common
+      );
+
+      localStorage.setItem("tripPlanner", JSON.stringify(filteredTripPlanner));
+    }
+
+    setTripPlanner(
+      tripPlanner.filter(
+        (tripPlanner: TripPlanner) =>
+          tripPlanner.country.name.common !==
+          selectedCountry.country.name.common
+      )
+    );
+  };
+
+  const addCountryDays = (selectedCountry: TripPlanner) => {
+    const plannedCountriesStorage = localStorage.getItem("tripPlanner");
+
+    const updatedDays = (
+      plannedCountriesStorage ? JSON.parse(plannedCountriesStorage) : []
+    ).map((plannedCountry: TripPlanner) => {
+      if (
+        plannedCountry.country.name.common ===
+        selectedCountry.country.name.common
+      ) {
+        plannedCountry.days += 1;
+      }
+
+      return plannedCountry;
     });
+
+    localStorage.setItem("tripPlanner", JSON.stringify(updatedDays));
+
+    const plannedCountries = tripPlanner.map((plannedCountry) => {
+      if (
+        plannedCountry.country.name.common ===
+        selectedCountry.country.name.common
+      ) {
+        plannedCountry.days += 1;
+      }
+
+      return plannedCountry;
+    });
+
+    setTripPlanner(plannedCountries);
   };
 
-  const removeFromTripPlanner = (selectedCountry: Country) => {
+  const removeCountryDays = (selectedCountry: TripPlanner) => {
+    const plannedCountriesStorage = localStorage.getItem("tripPlanner");
+
+    const updatedDays = (
+      plannedCountriesStorage ? JSON.parse(plannedCountriesStorage) : []
+    ).map((plannedCountry: TripPlanner) => {
+      if (
+        plannedCountry.country.name.common ===
+        selectedCountry.country.name.common
+      ) {
+        plannedCountry.days -= 1;
+      }
+
+      return plannedCountry;
+    });
+
+    localStorage.setItem("tripPlanner", JSON.stringify(updatedDays));
+
+    const plannedCountries = tripPlanner.map((plannedCountry) => {
+      if (
+        plannedCountry.country.name.common ===
+        selectedCountry.country.name.common
+      ) {
+        plannedCountry.days -= 1;
+      }
+
+      return plannedCountry;
+    });
+
+    setTripPlanner(plannedCountries);
+  };
+
+  const getCountriesInTripPlanner = () => {
+    if (!tripPlanner.length) {
+      const tripPlannerStorage = localStorage.getItem("tripPlanner");
+
+      const storedPlannedCountries = tripPlannerStorage
+        ? JSON.parse(tripPlannerStorage)
+        : tripPlanner;
+
+      setTripPlanner(storedPlannedCountries);
+    }
+
+    return tripPlanner;
+  };
+
+  const resetTripPlanner = () => {
     setCountries((prevCountries) =>
-      prevCountries.map((country) =>
-        country.name.common === selectedCountry.name.common
-          ? { ...country, inTripPlanner: false, days: 0 }
-          : country
-      )
+      prevCountries.map((country) => ({
+        ...country,
+        inTripPlanner: false,
+        days: 0,
+      }))
     );
   };
 
-  const addCountryDays = (selectedCountry: Country) => {
-    setCountries((prevCountries) =>
-      prevCountries.map((country) =>
-        country.name.common === selectedCountry.name.common
-          ? { ...country, days: country.days + 1 }
-          : country
-      )
-    );
-  };
+  const createTrip = (trip: Trip) => {
+    const tripsStorage = localStorage.getItem("trips");
 
-  const removeCountryDays = (selectedCountry: Country) => {
-    setCountries((prevCountries) =>
-      prevCountries.map((country) =>
-        country.name.common === selectedCountry.name.common
-          ? { ...country, days: country.days - 1 }
-          : country
-      )
-    );
+    const storedTrips = tripsStorage ? [...JSON.parse(tripsStorage), trip] : [];
+
+    localStorage.setItem("trips", JSON.stringify(storedTrips));
+
+    setTrips(storedTrips);
   };
 
   useEffect(() => {
     fetchCountries();
+    getCountriesInTripPlanner();
   }, []);
-
-  const getCountriesInTripPlanner = () =>
-    countries.filter((country) => country.inTripPlanner);
 
   return (
     <>
       <CountriesContext.Provider
         value={{
           countries,
+          tripPlanner,
+          trips,
+          createTrip,
           addToTripPlanner,
           fetchCountries,
           getCountriesInTripPlanner,
+          resetTripPlanner,
           removeFromTripPlanner,
           addCountryDays,
           removeCountryDays,

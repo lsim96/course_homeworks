@@ -9,8 +9,14 @@ interface CountryPanelProps {
 }
 
 function CountryPanel({ country }: CountryPanelProps) {
-  const { addToTripPlanner } = useContext(CountriesContext);
+  const { addToTripPlanner, tripPlanner } = useContext(CountriesContext);
 
+  const plannedCountriesByName = Object.fromEntries(
+    tripPlanner.map((plannedCountry) => [
+      plannedCountry.country.name.common,
+      true,
+    ])
+  );
   return (
     <div
       className="panel"
@@ -35,7 +41,7 @@ function CountryPanel({ country }: CountryPanelProps) {
               addToTripPlanner(country);
             }}
           >
-            {country.inTripPlanner ? (
+            {plannedCountriesByName[country.name.common] ? (
               "ADDED"
             ) : (
               <i className="fa-solid fa-plane"></i>
