@@ -1,5 +1,5 @@
 import type { Country } from "../models/country.model";
-import type { Passenger, TripPlanner } from "../models/trip.model";
+import type { Passenger, Trip } from "../models/trip.model";
 
 export const savePlannerInLocalStorage = (
   key: string,
@@ -19,8 +19,8 @@ export const savePlannerInLocalStorage = (
   localStorage.setItem(`${key}`, JSON.stringify(result));
 };
 
-export const loadPlannerFromLocalStorage = (): TripPlanner[] => {
-  const countryJSON = localStorage.getItem("planned");
+export const loadPlannerFromLocalStorage = (): Trip[] => {
+  const countryJSON = localStorage.getItem("trips");
 
   if (!countryJSON) return [];
 

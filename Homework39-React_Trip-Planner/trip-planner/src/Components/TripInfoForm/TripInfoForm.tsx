@@ -91,7 +91,7 @@ export function TripInfoForm() {
       )}
       <Button
         type="submit"
-        disabled={isValid}
+        // disabled={isValid}
         onBtnClick={handleSubmit(onSubmit)}
       >
         Submit

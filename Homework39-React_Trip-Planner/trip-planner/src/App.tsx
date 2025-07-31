@@ -25,7 +25,6 @@ function App() {
     <div className="App">
       <Header title={headerTitle} continents={linkData} />
       <main>
-        <h1>10 Most popular tourist destinations</h1>
         <Routes>
           <Route path="/" element={<CountriesPage page={""} />}></Route>
           <Route path="/asia" element={<CountriesPage page={"Asia"} />}></Route>

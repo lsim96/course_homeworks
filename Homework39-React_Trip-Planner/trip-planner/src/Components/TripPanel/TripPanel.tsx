@@ -1,4 +1,5 @@
 import type { Trip } from "../../models/trip.model";
+
 import "./TripPanel.css";
 
 interface TripPanelProps {
